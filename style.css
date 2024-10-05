@@ -1,0 +1,46 @@
+:root {
+    --main-color: #1c1c50;
+    --white: white;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+   /*product page  */
+.product_imagee img{
+    transition: 0.3s;
+}
+.product_imagee img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    
+}
+.color_circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    
+}
+.color_circle1{
+    background-color: orange;
+}
+.color_circle2{
+    background-color: red;
+}
+.color_circle3{
+    background-color: blue;
+}
+.product_details button{
+    background-color: var(--main-color);
+    color: white;
+}
+
+.color_circle:hover ,.color_circle:active{
+    border: solid grey 1px;
+    cursor: pointer;
+}
+/*product page  */
+
