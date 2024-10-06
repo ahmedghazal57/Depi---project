@@ -16,4 +16,12 @@ bag_orange.onclick=function(){
 bag_blue.onclick=function(){
     bag_img.src="image/bag_blue.png";
 }
+let btnEl=document.querySelector(".size");
+let size=document.querySelectorAll(".size");
+size.forEach(btnEl => {
+    btnEl.addEventListener('click',()=>{
+        document.querySelector(".special")?.classList.remove("special");
+        btnEl.classList.add("special");
+    })
+})
 // product page

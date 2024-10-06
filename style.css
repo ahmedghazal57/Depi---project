@@ -18,6 +18,9 @@
     cursor: pointer;
     
 }
+.product_stars i{
+    color: var(--main-color);
+}
 .color_circle{
     width: 20px;
     height: 20px;
@@ -33,14 +36,24 @@
 .color_circle3{
     background-color: blue;
 }
-.product_details button{
+.product_sizes button,.add_cart{
+    transition: 0.3s;
+    border: solid var(--main-color);
+}
+.product_details button:hover{
     background-color: var(--main-color);
-    color: white;
+    color: var(--white);
+}
+.special{
+    background-color: var(--main-color);
+    color: var(--white);
 }
 
 .color_circle:hover ,.color_circle:active{
     border: solid grey 1px;
     cursor: pointer;
 }
+
+
 /*product page  */
 
