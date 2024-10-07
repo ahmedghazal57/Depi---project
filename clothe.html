@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="producs_style.css" />
+    <!-- Font awesomne -->
+    <script
+      src="https://kit.fontawesome.com/080b2585e6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Banner -->
+    <div class="products_banner">
+      <div class="container">
+        <h2>Get More Product</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero officiis
+          consequuntur repellendus deleniti, vel minus libero eveniet dolore
+          voluptas inventore.
+        </p>
+        <button class="products_shop_now">shop now</button>
+      </div>
+    </div>
+    <!-- Products -->
+    <div class="all_products">
+      <div class="container">
+        <!-- Button filter for responsive -->
+        <span class="btn_filter" onclick="open_close_filter()">
+          filter <i class="fa-solid fa-filter"></i>
+        </span>
+        <!-- Div filter -->
+        <div class="filters">
+          <h2>Filter</h2>
+          <div class="filter_item">
+            <h4>Cattegorie</h4>
+            <div class="content">
+              <div class="item">
+                <span>T-Shirts</span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span>Hoodies</span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span>Pants</span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span>Heels</span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span>Smart-Watch</span>
+                <input type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="filter_item">
+            <h4>Brands</h4>
+            <div class="content">
+              <div class="item">
+                <span>Zara</span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span>Nike</span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span>H&M</span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span>Adidas</span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span>Balenciaga</span>
+                <input type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="filter_item">
+            <h4>Color</h4>
+            <div class="content">
+              <div class="item">
+                <span class="color" style="background: red"></span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span class="color" style="background: blue"></span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span class="color" style="background: black"></span>
+                <input type="checkbox" />
+              </div>
+              <div class="item">
+                <span class="color" style="background: purple"></span>
+                <input type="checkbox" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Product div his content in file all_products.js -->
+        <div id="products_div" class="products_div"></div>
+      </div>
+      <!-- padination -->
+      <div class="pagination">
+        <span class="btn_page prev"
+          ><i class="fa-solid fa-backward-step"></i
+        ></span>
+        <a href="#"> <span class="num_page active">1</span> </a>
+        <a href="#"> <span class="num_page">2</span> </a>
+        <a href="#"> <span class="num_page">3</span> </a>
+        <span class="btn_page next"
+          ><i class="fa-solid fa-forward-step"></i
+        ></span>
+      </div>
+    </div>
+    <script src="all_products.js"></script>
+  </body>
+</html>
