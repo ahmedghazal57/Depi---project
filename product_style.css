@@ -53,6 +53,10 @@
     background-color: var(--main-color);
     color: var(--white);
 }
+.special2{
+    background-color: var(--main-color);
+    color: var(--white);
+}
 
 .color_circle:hover ,.color_circle:active{
     border: solid grey 1px;

@@ -157,7 +157,7 @@ productsArray.forEach((product) => {
             <div class="detalis_products">
               <div class="details_about_product">
                 <h3 class="name_product">
-                  <a href="#">${product.name}</a>
+                  <a href="product_page${product.id}.html">${product.name}</a>
                 </h3>
                 <p>Lorem ipsum dolor sit amet.</p>
                 <div class="stars">
