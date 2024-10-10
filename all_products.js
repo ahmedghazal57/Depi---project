@@ -142,10 +142,25 @@ const productsArray = [
     }
 ];
 
+all_products_details=productsArray;
+
+
 let products_div=document.getElementById("products_div");
+
+
+
+
+function goToProductPage(id) {
+    // تخزين الـ id الخاص بالمنتج في sessionStorage
+    sessionStorage.setItem('selectedProductId', id);
+
+    // الانتقال إلى صفحة product_page0.html
+    window.location.href = 'product_page0.html';
+}
+product_Js=document.querySelector(".product_section");
 productsArray.forEach((product) => {
     products_div.innerHTML += `
-        <div class="product swiper-slide">
+        <div class="product swiper-slide" onclick="goToProductPage(${product.id});set_details(${product.id});">
             <div class="icons">
               <span><i class="fa-solid fa-cart-plus"></i></span>
               <span><i class="fa-solid fa-heart"></i></span>
@@ -186,6 +201,149 @@ productsArray.forEach((product) => {
 });
 
 
+
+
+// window.onload = function() {
+//     // جلب الـ id المخزن في sessionStorage
+//     const productId = sessionStorage.getItem('selectedProductId');
+
+//     if (productId) {
+//         // ابحث عن المنتج باستخدام الـ id
+//         const selectedProduct = productsArray.find(product => product.id == productId);
+
+//         if (selectedProduct) {
+//             // جلب الـ div الذي سيتم إدخال المحتوى فيه
+//             const productDiv = document.getElementById('product_Js');
+
+//             if (productDiv) {
+//                 // إضافة محتوى المنتج إلى الـ div
+//                 productDiv.innerHTML = `
+//                     <div class="container">
+//                         <div class="row pt-3">
+//                           <div class="col product_imagee d-flex justify-content-center align-items-center">
+//                             <a href="${selectedProduct.img}" data-lightbox="models">
+//                               <img id="bag_img" src="${selectedProduct.img}" alt="${selectedProduct.name}" />
+//                             </a>
+//                           </div>
+//                           <div class="product_details col d-flex flex-column gap-2">
+//                             <p class="h2 m-0 text-capitalize">${selectedProduct.name}</p>
+//                             <p class="h1 m-0">$${selectedProduct.price}</p>
+//                             <div class="d-flex product_stars">
+//                               <i class="fa-solid fa-star"></i>
+//                               <i class="fa-solid fa-star"></i>
+//                               <i class="fa-solid fa-star"></i>
+//                               <i class="fa-solid fa-star"></i>
+//                               <i class="fa-regular fa-star"></i>
+//                             </div>
+//                             <p class="h3 m-0">Product details:</p>
+//                             <p class="m-0">Lorem ipsum dolor sit amet consectetur.</p>
+//                             <p class="h3 m-0 mb-1">Select size:</p>
+//                             <div class="product_sizes d-flex gap-3 mb-2">
+//                               <button class="btn text-capitalize size" type="button">sm</button>
+//                               <button class="btn text-capitalize size" type="button">md</button>
+//                               <button class="btn text-capitalize size" type="button">lg</button>
+//                             </div>
+//                             <button class="btn col-lg-6 text-capitalize add_cart" type="button" id="add_cart">Add to cart</button>
+//                           </div>
+//                         </div>
+//                     </div>
+//                 `;
+//             } else {
+//                 console.error("Element with id 'product_Js' not found.");
+//             }
+//         } else {
+//             console.error("Product not found.");
+//         }
+//     } else {
+//         console.error("No product ID found in sessionStorage.");
+//     }
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let product_Js=document.getElementById("product_Js");
+// let products01=[];
+// function ProductPage(id){
+//     products01=productsArray[id];
+//     console.log("ProductPage");
+//     product_Js.innerHTML +=`
+//     <div class="container">
+//         <div class="row pt-3">
+//           <div
+//             class="col product_imagee d-flex justify-content-center align-items-center"
+//           >
+//             <a href="image/p1.png" data-lightbox="models"
+//               ><img id="bag_img" src="image/p1.png"
+//             /></a>
+//           </div>
+
+//           <div class="product_details col d-flex flex-column gap-2">
+//             <p class="h2 m-0 text-capitalize">woman bag</p>
+//             <p class="h1 m-0">$250</p>
+//             <div class="d-flex product_stars">
+//               <i class="fa-solid fa-star"></i>
+//               <i class="fa-solid fa-star"></i>
+//               <i class="fa-solid fa-star"></i>
+//               <i class="fa-solid fa-star"></i>
+//               <i class="fa-regular fa-star"></i>
+//             </div>
+//             <p class="h3 m-0">Product detailes:</p>
+//             <p class="m-0">
+//               Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+//               aperiam aut laboriosam qui ea, quam impedit officiis dignissimos
+//               odio possimus autem reiciendis quasi, error voluptate ratione
+//               perspiciatis facilis iste? Labore.
+//             </p>
+
+//             <p class="h3 m-0 mb-1">select size:</p>
+//             <div class="product_sizes d-flex gap-3 mb-2">
+//               <button class="btn text-capitalize size" type="button">sm</button>
+//               <button class="btn text-capitalize size" type="button">md</button>
+//               <button class="btn text-capitalize size" type="button">lg</button>
+//             </div>
+//             <button
+//               class="btn col-lg-6 text-capitalize add_cart"
+//               type="button"
+//               id="add_cart"
+//             >
+//               add to cart
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     `;
+
+// }
 
 // Open close filter
 var filter=document.querySelector(".filters");
