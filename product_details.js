@@ -18,8 +18,8 @@ function set_details(id) {
   if (products_details) {
     console.log(products_details.img);
     product_Js.innerHTML += `
-      <div class="container">
-        <div class="row pt-3">
+      <div class="container pb-lg-5">
+        <div class="row pt-3 ">
           <div class="col product_imagee d-flex justify-content-center align-items-center">
             <a href="${products_details.img}" data-lightbox="models">
               <img id="bag_img" src="${products_details.img}" />
