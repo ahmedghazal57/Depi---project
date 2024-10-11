@@ -44,14 +44,14 @@ const productsArray = [
     {
         id: 6,
         img: "image/p7.png",
-        name: "Grils Heel",
+        name: "Girls Heel",
         price: 20.10,
         old_price: 30.20
     },
     {
         id: 7,
         img: "image/p8.png",
-        name: "Means Jeans",
+        name: "Mens Jeans",
         price: 65.50,
         old_price: 100
     },
@@ -94,7 +94,7 @@ const productsArray = [
     {
         id: 13,
         img: "image/p14.png",
-        name: "Grils Heel",
+        name: "Girls Heel",
         price: 20.50,
         old_price: 25
     },
@@ -108,7 +108,7 @@ const productsArray = [
     {
         id: 15,
         img: "image/p16.png",
-        name: "Means Jeans",
+        name: "Mens Jeans",
         price: 20.50,
         old_price: 25
     },
