@@ -119,7 +119,11 @@
 .checkout{
   transition: 0.3s;
   border: solid var(--main-color);
-  color: black;
+  color: rgb(255, 255, 255);
+  background-color: var(--main-color);
+}
+.checkout:hover{
+  transform: scale(1.03);
 }
 /* cart page */
 

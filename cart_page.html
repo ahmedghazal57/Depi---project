@@ -14,36 +14,36 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container d-flex flex-column justify-content-center gap-4">
+    <div class="container d-flex flex-column justify-content-center gap-4 ">
         <p class="h2 text-capitalize my-4">shopping cart</p>
-        <div class="row align-items-center cart_product">
-            <img src="image/p3.png" alt="" class="col-3">
-            <div class="flex flex-column col">
-            <p class="text-capitalize">grey t-shirt</p>
-            <span><p class="text-capitalize">color grey , size M</p></span>
-            <span><p>Qty.1</p></span>
-            </div>
-            <div class="d-flex gap-4 col align-items-center justify-content-end">
-            <p class="m-0">$30</p>
-            <i class="fa-solid fa-x pe-3 close_button"></i>
-            </div>
+        <!-- the cart item container -->
+        <div class="row align-items-center cart_product mx-2 cart_item_container">
+            
         </div>
-        <div class="row align-items-center cart_product">
-            <img src="image/p1.png" alt="" class="col-3">
-            <div class="flex flex-column col">
-            <p class="text-capitalize">grey t-shirt</p>
-            <span><p class="text-capitalize">color grey , size M</p></span>
-            <span><p>Qty.1</p></span>
-            </div>
-            <div class="d-flex gap-4 col align-items-center justify-content-end">
-            <p class="m-0">$30</p>
-            <i class="fa-solid fa-x pe-3 close_button"></i>
-            </div>
-        </div>
+        <!-- the cart item container -->
         <button class="btn  text-capitalize add_cart  more_products text-decoration-none align-self-center" type="button"><a class="text-decoration-none" href="clothe.html">more products</a> </button>
-        <button class="btn text-capitalize  checkout mb-2" type="button" id="Checkout">Checkout</button>
+        <button class="btn text-capitalize  checkout mb-2 buy_now_button" type="button" id="buy_now_button">Checkout</button>
     </div>
-    
+
+    <div class="buy_now d-none flex-column ps-5 pe-5 text-white container pt-4 pb-4" id="buy_now" style="min-width: 350px;">
+      <p class="h3 m-0 text-capitalize mb-3">personal information</p>
+      <form class="d-flex flex-column">
+        <label class="mb-2" for="">Name and Surname</label>
+        <input type="text" placeholder="john doe" class="mb-4 text_input pb-2 ps-2">
+        <label class="mb-2 text-capitalize" for="">phone number</label>
+        <input type="tel" placeholder="+20 54321" class="mb-4 text_input pb-2 ps-2">
+        <label class="mb-2" for="">Addres</label>
+        <input type="text" placeholder="Elton st. 41 399" class="mb-4 text_input pb-2 ps-2">
+        <p class="h3 m-0 text-capitalize mb-3">card information</p>
+        <input type="number" placeholder="Card number" class="mb-4 text_input pb-2 ps-2">
+        <div class="row m-0 gap-5 p-0 container mb-2 ">
+          <input type="number" placeholder="mm" class="mb-4 text_input pb-2 ps-2 col">
+          <input type="number" placeholder="yyyy" class="mb-4 text_input pb-2 ps-2 col">
+          <input type="number" placeholder="cvv" class="mb-4 text_input pb-2 ps-2 col">
+        </div>
+        <button class="btn text-capitalize  text-dark bg-white mb-2 .checkout" type="button" id="Checkout">Checkout</button>
+      </form>
+    </div>
      <!-- Footer -->
     <footer id="footer">
         <div class="footer-top">
@@ -148,7 +148,6 @@
         crossorigin="anonymous"
       ></script>
       <script src="product_details.js"></script>
-      <script src="lightbox-plus-jquery.js"></script>
       <script src="cart_page.js"></script>
       <script src="all_products.js"></script>
       

@@ -14,7 +14,6 @@ window.onload = function () {
 function set_details(id) {
   console.log(id);
   products_details = all_products_details[id];
-
   if (products_details) {
     console.log(products_details.img);
     product_Js.innerHTML += `
@@ -51,8 +50,11 @@ function set_details(id) {
             <button class="btn col-lg-6 text-capitalize add_cart" type="button" id="add_cart">
               add to cart
             </button>
-            <button class="btn col-lg-6 text-capitalize add_cart" type="button" id="buy_now_button">
+            <button class="btn col-lg-6 text-capitalize add_cart buy_now_button" type="button" id="buy_now_button">
               buy now
+            </button>
+            <button class="btn col-lg-6 text-capitalize" type="button" id="cart_page_button">
+              cart page
             </button>
           </div>
         </div>
@@ -61,6 +63,7 @@ function set_details(id) {
 
     // Now that the elements are added, select and add event listeners
     // making buttons active if clicked
+    
     let sizeButtons = document.querySelectorAll(".size");
     sizeButtons.forEach(btnEl => {
       btnEl.addEventListener('click', () => {
@@ -68,7 +71,6 @@ function set_details(id) {
         btnEl.classList.add("special");
       });
     });
-
     let addCartButton = document.getElementById("add_cart");
     addCartButton.addEventListener('click', () => {
       if (addCartButton.classList.contains("special2")) {
@@ -79,15 +81,22 @@ function set_details(id) {
         addCartButton.innerHTML = 'Added to cart';
       }
     });
+    
     // buy now button opens buy div
-    let buy_now_button=document.getElementById("buy_now_button");
-    buy_now_button.addEventListener('click',function(){
-      console.log("hi");
-      buy_now.classList.remove("d-none");
-      
-      buy_now.classList.add("d-flex");
-      
+    let buy_now_buttons = document.querySelectorAll(".buy_now_button");
+    buy_now_buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        document.querySelectorAll(".buy_now").forEach(element => {
+          element.classList.remove("d-none");
+          element.classList.add("d-flex");
+        });
+      });
     });
+    
 
     // hiding the buy_now div when clicking away
     document.addEventListener('click', function(event) {
@@ -96,9 +105,10 @@ function set_details(id) {
       if (!buy_now.contains(event.target) && event.target !== buy_now_button) {
           buy_now.classList.remove("d-flex");
           buy_now.classList.add("d-none");
-          console.log(buy_now.classList);
+         
       }
     });
+    // checkout button in the form
     let checkout=document.getElementById("Checkout");
     checkout.addEventListener('click',function(){
      
@@ -106,7 +116,18 @@ function set_details(id) {
       buy_now.classList.add("d-none");
       alert("Thanks for buying");
     });
+
+    // button that goes to cart page with the product selected
+  let cart_page_button = document.getElementById("cart_page_button");
+  cart_page_button.addEventListener('click', () => {
+  sessionStorage.setItem('cart_div', JSON.stringify(products_details));
+  window.location.href = 'cart_page.html';
+});
+
   } else {
+    
     console.error(`No product details found for ID: ${id}`);
   }
+
+  
 }
