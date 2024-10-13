@@ -1,3 +1,13 @@
+// open &  close menu 
+var menu = document.querySelector('#menu');
+function open_menu(){
+    menu.classList.add("active");
+}
+function close_menu(){
+    menu.classList.remove("active");
+}
+
+
 // scrolling up
 let scrolling = document.querySelector(".up");
 window.onscroll = function () {

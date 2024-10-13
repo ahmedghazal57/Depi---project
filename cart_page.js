@@ -1,3 +1,14 @@
+// open &  close menu 
+var menu = document.querySelector('#menu');
+function open_menu(){
+    menu.classList.add("active");
+}
+function close_menu(){
+    menu.classList.remove("active");
+}
+
+
+
 // opening the buy now div when pressing on checkout
 let buy_now_buttons = document.querySelectorAll(".buy_now_button");
 buy_now_buttons.forEach((button) => {

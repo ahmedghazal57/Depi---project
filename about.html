@@ -30,8 +30,89 @@
       src="https://kit.fontawesome.com/080b2585e6.js"
       crossorigin="anonymous"
     ></script>
+     <!--Font awesome kite-->
+     <script src="https://kit.fontawesome.com/1385f10e2a.js" crossorigin="anonymous"></script>
+     <!--Fonts-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     <!--Social Media icons-->
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+     <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   </head>
   <body>
+
+    <!--Header + Nav-->
+    <header>
+      <div class="container-nav">
+          <div class="top-nav">
+              <p>Get up to 30% OFF Store wide - Limted time only</p>
+              <ul>
+                  <li><a href="">Newsletter</a></li>
+                  <li><a href="">Trace order</a></li>
+                  <li><a href="">Contact us</a></li>
+                  <li><a href="">Sitemap</a></li>
+              <div class="media-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+              </ul>
+          </div>
+
+          <!--Middle Nav-->
+          <div class="middle-nav">
+              <a class="logo" href=""><img src="image/logo.png"> </a>
+              <div class="break-line"></div>
+              <div class="our-email">
+                  <i class="fa-solid fa-headset"></i>
+                  <div class="contact-info">
+                      <p>Email us: Support@storesupport.com</p>
+                      <p>Call us: +01234368711</p>
+                  </div>
+              </div>
+                  <form action="" class="search">
+                      <input type="search" placeholder="Search for products...">
+                      <button type="submit">
+                          <i id="search-icon" class="fa-solid fa-magnifying-glass "></i>
+                      </button>
+                  </form>
+                  <div class="icons" >
+                  <i  id="user-icon" class="fa-regular fa-user" ></i>
+                  <i id="fav-icon" class="fa-regular fa-heart"></i>
+
+                  <div class="cart_header">
+                      <span class="cost">L.E 0.00</span>
+                      <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
+                      <span class="count_item">0</span>
+                  </div>
+                  <i onclick="open_menu()" id="box-menu-icon" class="fa-solid fa-bars" ></i>
+
+              </div>
+          </div>
+          <div class="end-nav">
+              <ul id="menu">
+                  <span onclick="close_menu()" class="bg-overlay"></span>
+                  <i onclick="close_menu()" class="fa-regular fa-circle-xmark btn_close_menu"></i>
+                  <img class="logo_nav" src="image/logo.png">
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">clothe</a></li>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">contact us</a></li>
+                  <a id="login_icon_nav_bar" href="">login<i class="fa-solid fa-right-to-bracket"></i></a>
+                  <a id="sign_up_icon_nav_bar" href="">sign up<i class="fa-solid fa-user-plus"></i></a>
+              </ul>
+              <div class="loging_signup">
+                  <a id="login_icon" href="">login<i class="fa-solid fa-right-to-bracket"></i></a>
+                  <a id="sign_up_icon" href="">sign up<i class="fa-solid fa-user-plus"></i></a>
+                  
+              </div>
+          </div>
+      </div>
+  </header>
+  <!--End Of Nav-->
     <div class="about_us">
       <div class="container">
         <div class="about_title">
