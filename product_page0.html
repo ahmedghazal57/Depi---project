@@ -11,7 +11,12 @@
     />
     <link rel="stylesheet" href="lightbox.css" />
     <link rel="stylesheet" href="product_style.css" />
-    <title>Document</title>
+    <title>Product-Details</title>
+    <link
+      rel="shortcut icon"
+      href="image/favicon-32x32.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <!-- nav -->
@@ -19,30 +24,63 @@
     <!-- nav -->
 
     <!-- product section -->
+    <div id="product_Js" class="product_section" style="margin-top: 50px"></div>
     <div
-      id="product_Js"
-      class="product_section"
-      style=" margin-top: 50px"
-    ></div>
-    <div class="buy_now d-none flex-column ps-5 pe-5 text-white container pt-4 pb-4" id="buy_now" style="min-width: 350px;">
+      class="buy_now d-none flex-column ps-5 pe-5 text-white container pt-4 pb-4"
+      id="buy_now"
+      style="min-width: 350px"
+    >
       <p class="h3 m-0 text-capitalize mb-3">personal information</p>
       <form class="d-flex flex-column">
         <label class="mb-2" for="">Name and Surname</label>
-        <input type="text" placeholder="john doe" class="mb-4 text_input pb-2 ps-2">
+        <input
+          type="text"
+          placeholder="john doe"
+          class="mb-4 text_input pb-2 ps-2"
+        />
         <label class="mb-2 text-capitalize" for="">phone number</label>
-        <input type="tel" placeholder="+20 54321" class="mb-4 text_input pb-2 ps-2">
+        <input
+          type="tel"
+          placeholder="+20 54321"
+          class="mb-4 text_input pb-2 ps-2"
+        />
         <label class="mb-2" for="">Addres</label>
-        <input type="text" placeholder="Elton st. 41 399" class="mb-4 text_input pb-2 ps-2">
+        <input
+          type="text"
+          placeholder="Elton st. 41 399"
+          class="mb-4 text_input pb-2 ps-2"
+        />
         <p class="h3 m-0 text-capitalize mb-3">card information</p>
-        <input type="number" placeholder="Card number" class="mb-4 text_input pb-2 ps-2">
-        <div class="row m-0 gap-5 p-0 container mb-2 ">
-          <input type="number" placeholder="mm" class="mb-4 text_input pb-2 ps-2 col">
-          <input type="number" placeholder="yyyy" class="mb-4 text_input pb-2 ps-2 col">
-          <input type="number" placeholder="cvv" class="mb-4 text_input pb-2 ps-2 col">
+        <input
+          type="number"
+          placeholder="Card number"
+          class="mb-4 text_input pb-2 ps-2"
+        />
+        <div class="row m-0 gap-5 p-0 container mb-2">
+          <input
+            type="number"
+            placeholder="mm"
+            class="mb-4 text_input pb-2 ps-2 col"
+          />
+          <input
+            type="number"
+            placeholder="yyyy"
+            class="mb-4 text_input pb-2 ps-2 col"
+          />
+          <input
+            type="number"
+            placeholder="cvv"
+            class="mb-4 text_input pb-2 ps-2 col"
+          />
         </div>
-        <button class="btn text-capitalize  text-dark bg-white mb-2" type="button" id="Checkout">Checkout</button>
+        <button
+          class="btn text-capitalize text-dark bg-white mb-2"
+          type="button"
+          id="Checkout"
+        >
+          Checkout
+        </button>
       </form>
-
     </div>
     <!-- product section -->
     <!-- Footer -->
@@ -149,9 +187,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="product_details.js"></script>
-    <script src="lightbox-plus-jquery.js"></script>
-    
+    <!-- <script src="lightbox-plus-jquery.js"></script> -->
     <script src="all_products.js"></script>
-    
   </body>
 </html>

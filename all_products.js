@@ -1,165 +1,160 @@
 const productsArray = [
-    {
-        id: 0,
-        img: "image/p1.png",
-        name: "Girls Heel",
-        price: 12.3,
-        old_price: 15.5
-    },
-    {
-        id: 1,
-        img: "image/p2.png",
-        name: "Men Hoodie",
-        price: 3.2,
-        old_price: 5.4
-    },
-    {
-        id: 2,
-        img: "image/p3.png",
-        name: "Smart Watch",
-        price: 50,
-        old_price: 60
-    },
-    {
-        id: 3,
-        img: "image/p4.png",
-        name: "Men T-Shirt",
-        price: 10.5,
-        old_price: 15
-    },
-    {
-        id: 4,
-        img: "image/p5.png",
-        name: "Hand Bag",
-        price: 100.5,
-        old_price: 120.30
-    },
-    {
-        id: 5,
-        img: "image/p6.png",
-        name: "Sport Shoes",
-        price: 32.50,
-        old_price: 35.30
-    },
-    {
-        id: 6,
-        img: "image/p7.png",
-        name: "Girls Heel",
-        price: 20.10,
-        old_price: 30.20
-    },
-    {
-        id: 7,
-        img: "image/p8.png",
-        name: "Mens Jeans",
-        price: 65.50,
-        old_price: 100
-    },
-    {
-        id: 8,
-        img: "image/p9.jpg",
-        name: "Dark Pant",
-        price: 13.5,
-        old_price: 15.10
-
-    },
-    {
-        id: 9,
-        img: "image/p10.jpg",
-        name: "Mwalk Billies",
-        price: 16.50,
-        old_price: 10.50
-    },
-    {
-        id: 10,
-        img: "image/p11.jpg",
-        name: "Sweet Shirt",
-        price: 10.5,
-        old_price: 15.50 
-    },
-    {
-        id: 11,
-        img: "image/p12.jpg",
-        name: "Black T-Shirt",
-        price: 5.1,
-        old_price: 6.50       
-    },
-    {
-        id: 12,
-        img: "image/p13.png",
-        name: "Hand Bag",
-        price: 20.50,
-        old_price: 25
-    },
-    {
-        id: 13,
-        img: "image/p14.png",
-        name: "Girls Heel",
-        price: 20.50,
-        old_price: 25
-    },
-    {
-        id: 14,
-        img: "image/p15.png",
-        name: "Sport Shoes",
-        price: 20.50,
-        old_price: 25
-    },
-    {
-        id: 15,
-        img: "image/p16.png",
-        name: "Mens Jeans",
-        price: 20.50,
-        old_price: 25
-    },
-    {
-        id: 16,
-        img: "image/p17.png",
-        name: "Dark Pant",
-        price: 20.50,
-        old_price: 25
-    },
-    {
-        id: 17,
-        img: "image/p18.png",
-        name: "Mwalk Billies",
-        price: 20.50,
-        old_price: 25
-    },
-    {
-        id: 18,
-        img: "image/p19.png",
-        name: "Sweet Shirt",
-        price: 20.50,
-        old_price: 25
-    },
-    {
-        id: 19,
-        img: "image/p20.png",
-        name: "Black T-Shirt",
-        price: 20.50,
-        old_price: 25
-    }
+  {
+    id: 0,
+    img: "image/p1.png",
+    name: "Girls Heel",
+    price: 12.3,
+    old_price: 15.5,
+  },
+  {
+    id: 1,
+    img: "image/p2.png",
+    name: "Men Hoodie",
+    price: 3.2,
+    old_price: 5.4,
+  },
+  {
+    id: 2,
+    img: "image/p3.png",
+    name: "Smart Watch",
+    price: 50,
+    old_price: 60,
+  },
+  {
+    id: 3,
+    img: "image/p4.png",
+    name: "Men T-Shirt",
+    price: 10.5,
+    old_price: 15,
+  },
+  {
+    id: 4,
+    img: "image/p5.png",
+    name: "Hand Bag",
+    price: 100.5,
+    old_price: 120.3,
+  },
+  {
+    id: 5,
+    img: "image/p6.png",
+    name: "Sport Shoes",
+    price: 32.5,
+    old_price: 35.3,
+  },
+  {
+    id: 6,
+    img: "image/p7.png",
+    name: "Girls Heel",
+    price: 20.1,
+    old_price: 30.2,
+  },
+  {
+    id: 7,
+    img: "image/p8.png",
+    name: "Mens Jeans",
+    price: 65.5,
+    old_price: 100,
+  },
+  {
+    id: 8,
+    img: "image/p9.jpg",
+    name: "Dark Pant",
+    price: 13.5,
+    old_price: 15.1,
+  },
+  {
+    id: 9,
+    img: "image/p10.jpg",
+    name: "Mwalk Billies",
+    price: 16.5,
+    old_price: 10.5,
+  },
+  {
+    id: 10,
+    img: "image/p11.jpg",
+    name: "Sweet Shirt",
+    price: 10.5,
+    old_price: 15.5,
+  },
+  {
+    id: 11,
+    img: "image/p12.jpg",
+    name: "Black T-Shirt",
+    price: 5.1,
+    old_price: 6.5,
+  },
+  {
+    id: 12,
+    img: "image/p13.png",
+    name: "Hand Bag",
+    price: 20.5,
+    old_price: 25,
+  },
+  {
+    id: 13,
+    img: "image/p14.png",
+    name: "Girls Heel",
+    price: 20.5,
+    old_price: 25,
+  },
+  {
+    id: 14,
+    img: "image/p15.png",
+    name: "Sport Shoes",
+    price: 20.5,
+    old_price: 25,
+  },
+  {
+    id: 15,
+    img: "image/p16.png",
+    name: "Mens Jeans",
+    price: 20.5,
+    old_price: 25,
+  },
+  {
+    id: 16,
+    img: "image/p17.png",
+    name: "Dark Pant",
+    price: 20.5,
+    old_price: 25,
+  },
+  {
+    id: 17,
+    img: "image/p18.png",
+    name: "Mwalk Billies",
+    price: 20.5,
+    old_price: 25,
+  },
+  {
+    id: 18,
+    img: "image/p19.png",
+    name: "Sweet Shirt",
+    price: 20.5,
+    old_price: 25,
+  },
+  {
+    id: 19,
+    img: "image/p20.png",
+    name: "Black T-Shirt",
+    price: 20.5,
+    old_price: 25,
+  },
 ];
 
-all_products_details=productsArray;
+all_products_details = productsArray;
 
-
-let products_div=document.getElementById("products_div");
-
-
-
+let products_div = document.getElementById("products_div");
 
 function goToProductPage(id) {
-    // تخزين الـ id الخاص بالمنتج في sessionStorage
-    sessionStorage.setItem('selectedProductId', id);
+  // تخزين الـ id الخاص بالمنتج في sessionStorage
+  sessionStorage.setItem("selectedProductId", id);
 
-    // الانتقال إلى صفحة product_page0.html
-    window.location.href = 'product_page0.html';
+  // الانتقال إلى صفحة product_page0.html
+  window.location.href = "product_page0.html";
 }
-product_Js=document.querySelector(".product_section");
+product_Js = document.querySelector(".product_section");
 productsArray.forEach((product) => {
-    products_div.innerHTML += `
+  products_div.innerHTML += `
         <div class="product swiper-slide" onclick="goToProductPage(${product.id});set_details(${product.id});">
             <div class="icons">
               <span><i class="fa-solid fa-cart-plus"></i></span>
@@ -199,9 +194,6 @@ productsArray.forEach((product) => {
           </div>
     `;
 });
-
-
-
 
 // window.onload = function() {
 //     // جلب الـ id المخزن في sessionStorage
@@ -259,38 +251,6 @@ productsArray.forEach((product) => {
 //     }
 // };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let product_Js=document.getElementById("product_Js");
 // let products01=[];
 // function ProductPage(id){
@@ -346,7 +306,7 @@ productsArray.forEach((product) => {
 // }
 
 // Open close filter
-var filter=document.querySelector(".filters");
-function open_close_filter(){
-    filter.classList.toggle("active");
+var filter = document.querySelector(".filters");
+function open_close_filter() {
+  filter.classList.toggle("active");
 }

@@ -63,71 +63,64 @@ function set_details(id) {
 
     // Now that the elements are added, select and add event listeners
     // making buttons active if clicked
-    
+
     let sizeButtons = document.querySelectorAll(".size");
-    sizeButtons.forEach(btnEl => {
-      btnEl.addEventListener('click', () => {
+    sizeButtons.forEach((btnEl) => {
+      btnEl.addEventListener("click", () => {
         document.querySelector(".special")?.classList.remove("special");
         btnEl.classList.add("special");
       });
     });
     let addCartButton = document.getElementById("add_cart");
-    addCartButton.addEventListener('click', () => {
+    addCartButton.addEventListener("click", () => {
       if (addCartButton.classList.contains("special2")) {
         addCartButton.classList.remove("special2");
-        addCartButton.innerHTML = 'Add to cart';
+        addCartButton.innerHTML = "Add to cart";
       } else {
         addCartButton.classList.add("special2");
-        addCartButton.innerHTML = 'Added to cart';
+        addCartButton.innerHTML = "Added to cart";
       }
     });
-    
+
     // buy now button opens buy div
     let buy_now_buttons = document.querySelectorAll(".buy_now_button");
-    buy_now_buttons.forEach(button => {
-      button.addEventListener('click', function() {
+    buy_now_buttons.forEach((button) => {
+      button.addEventListener("click", function () {
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
-        document.querySelectorAll(".buy_now").forEach(element => {
+        document.querySelectorAll(".buy_now").forEach((element) => {
           element.classList.remove("d-none");
           element.classList.add("d-flex");
         });
       });
     });
-    
 
     // hiding the buy_now div when clicking away
-    document.addEventListener('click', function(event) {
-      const buy_now = document.getElementById('buy_now');
-      
+    document.addEventListener("click", function (event) {
+      const buy_now = document.getElementById("buy_now");
+
       if (!buy_now.contains(event.target) && event.target !== buy_now_button) {
-          buy_now.classList.remove("d-flex");
-          buy_now.classList.add("d-none");
-         
+        buy_now.classList.remove("d-flex");
+        buy_now.classList.add("d-none");
       }
     });
     // checkout button in the form
-    let checkout=document.getElementById("Checkout");
-    checkout.addEventListener('click',function(){
-     
+    let checkout = document.getElementById("Checkout");
+    checkout.addEventListener("click", function () {
       buy_now.classList.remove("d-flex");
       buy_now.classList.add("d-none");
       alert("Thanks for buying");
     });
 
     // button that goes to cart page with the product selected
-  let cart_page_button = document.getElementById("cart_page_button");
-  cart_page_button.addEventListener('click', () => {
-  sessionStorage.setItem('cart_div', JSON.stringify(products_details));
-  window.location.href = 'cart_page.html';
-});
-
+    let cart_page_button = document.getElementById("cart_page_button");
+    cart_page_button.addEventListener("click", () => {
+      sessionStorage.setItem("cart_div", JSON.stringify(products_details));
+      window.location.href = "cart_page.html";
+    });
   } else {
-    
     console.error(`No product details found for ID: ${id}`);
   }
-
-  
 }
