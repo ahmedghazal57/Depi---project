@@ -112,9 +112,8 @@ header .container-nav .middle-nav{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 95%;
-  margin: auto;
-  margin-top: 10px;
+  width: 100%;
+  margin: 0 20px 0 20px;
   background-color: #ffffff;
 }
 header .container-nav .middle-nav .logo img{
@@ -295,6 +294,9 @@ header .container-nav .end-nav{
 header .container-nav .end-nav ul{
   display: flex;
   gap: 70px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
 }
 header .container-nav .end-nav ul li a{
   color: white;
@@ -497,7 +499,7 @@ header .end-nav  #login_icon_nav_bar, #sign_up_icon_nav_bar{
   
 }
 .section1-home {
-  margin-top: 250px;
+  margin-top: 210px;
   padding: 60px 0;
   display: flex;
   justify-content: center;
@@ -637,6 +639,7 @@ h4 {
   object-fit: cover;
   padding: 20px 0;
   margin: 20px 0;
+  margin-top: 210px;
   background-position: right top;
 }
 .products_banner .container {
@@ -982,8 +985,9 @@ img:hover {
 /*! Sign in &Sign up Page */
 /* Sign in &Sign up */
 .login {
-  width: 90%;
+  width: 90%;  
   margin: 10px auto;
+  margin-top: 210px;
   padding: 30px;
   background: #1c1c5017;
   border-radius: 10px;
@@ -1135,6 +1139,7 @@ img:hover {
   height: 115vh;
   width: 90%;
   margin: 10px auto;
+  margin-top: 210px;
   padding: 30px;
   background: #ffffff;
   border-radius: 10px;
@@ -1225,6 +1230,7 @@ img:hover {
   height: 600px;
   width: 90%;
   margin: 20px auto;
+  margin-top: 210px;
   padding: 30px;
   background: #ffffff;
   border-radius: 10px;

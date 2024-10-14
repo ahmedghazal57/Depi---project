@@ -1,14 +1,11 @@
-// open &  close menu 
-var menu = document.querySelector('#menu');
-function open_menu(){
-    menu.classList.add("active");
+// open &  close menu
+var menu = document.querySelector("#menu");
+function open_menu() {
+  menu.classList.add("active");
 }
-function close_menu(){
-    menu.classList.remove("active");
+function close_menu() {
+  menu.classList.remove("active");
 }
-
-
-
 
 var all_products_details;
 let products_details = [];
@@ -30,7 +27,7 @@ function set_details(id) {
     console.log(products_details.img);
     product_Js.innerHTML += `
       <div class="container pb-lg-5">
-        <div class="row pt-3 ">
+        <div class="row pt-3" style="margin-top: 210px;" >
           <div class="col product_imagee d-flex justify-content-center align-items-center">
             <a href="${products_details.img}" data-lightbox="models">
               <img id="bag_img" src="${products_details.img}" />
