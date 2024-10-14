@@ -12,6 +12,7 @@ let products_details = [];
 let product_Js = document.querySelector(".product_section");
 
 window.onload = function () {
+  getCartItems();
   const productId = sessionStorage.getItem("selectedProductId");
   if (productId) {
     set_details(productId);
@@ -131,5 +132,75 @@ function set_details(id) {
     });
   } else {
     console.error(`No product details found for ID: ${id}`);
+  }
+}
+
+//! Open cart and close cart
+var cart = document.querySelector(".cart");
+function open_cart() {
+  cart.classList.add("active");
+}
+
+function close_cart() {
+  cart.classList.remove("active");
+}
+
+//! adding logic to cart
+var items_in_cart = document.querySelector(".items-in-cart");
+// let product_cart = [];
+let product_cart = JSON.parse(localStorage.getItem("product_cart")) || [];
+let price_cart_head = document.querySelector(".cost");
+let count_item = document.querySelector(".count_item");
+let count_item_cart = document.querySelector(".count_item_cart");
+let price_cart_total = document.querySelector(".price-cart-total");
+
+
+function addToCard(id, btn) {
+  product_cart.push(productsArray[id]);
+  btn.classList.add("active");
+  localStorage.setItem("product_cart", JSON.stringify(product_cart));
+  getCartItems();
+}
+
+function getCartItems() {
+  let total_price = 0;
+  let items_c = "";
+  for (let i = 0; i < product_cart.length; i++) {
+    items_c += `
+      <div class="item-cart">
+        <img src="${product_cart[i].img}" alt="" />
+        <div class="content">
+          <h4>${product_cart[i].name}</h4>
+          <p class="price-cart">$${product_cart[i].price}</p>
+        </div>
+        <button class="delete-item" onClick="remove_from_cart(${i})">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    `;
+    total_price += product_cart[i].price;
+  }
+
+  items_in_cart.innerHTML = items_c;
+
+  price_cart_head.innerHTML = "$" + total_price;
+  count_item.innerHTML = product_cart.length;
+  price_cart_total.innerHTML = "$" + total_price;
+  count_item_cart.innerHTML = `${product_cart.length}(Item in Cart)`;
+}
+
+function remove_from_cart(index) {
+  product_cart.splice(index, 1);
+  localStorage.setItem("product_cart", JSON.stringify(product_cart));
+  getCartItems();
+
+  let addToCartButtons = document.querySelectorAll(".fa-cart-plus");
+  for (let i = 0; i < addToCartButtons.length; i++) {
+    addToCartButtons[i].classList.remove("active");
+    product_cart.forEach((product) => {
+      if (product.id == i) {
+        addToCartButtons[i].classList.add("active");
+      }
+    });
   }
 }

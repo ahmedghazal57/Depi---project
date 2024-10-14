@@ -9,7 +9,6 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="lightbox.css" />
     <link rel="stylesheet" href="product_style.css" />
     <title>Product-Details</title>
     <link
@@ -41,7 +40,7 @@
     />
   </head>
   <body>
-    <!--Header + Nav-->
+    <!--! Header + Nav-->
     <header>
       <div class="container-nav">
         <div class="top-nav">
@@ -82,7 +81,7 @@
             <i id="user-icon" class="fa-regular fa-user"></i>
             <i id="fav-icon" class="fa-regular fa-heart"></i>
 
-            <div class="cart_header">
+            <div class="cart_header" onclick="open_cart()">
               <span class="cost">L.E 0.00</span>
               <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
               <span class="count_item">0</span>
@@ -124,8 +123,29 @@
         </div>
       </div>
     </header>
-    <!--End Of Nav-->
+    <!--! End Of Nav-->
+    <!-- ! Cart -->
+    <div class="cart">
+      <div class="top-cart">
+        <h3>My cart <span class="count_item_cart">(0Item in cart)</span></h3>
+        <span onclick="close_cart()" class="close-cart"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
 
+      <div class="items-in-cart"></div>
+      <div class="bottom-cart">
+        <div class="total">
+          <p>Cart subtotal</p>
+          <p class="price-cart-total">$0</p>
+        </div>
+        <div class="button-cart">
+          <a href="#" class="btn-cart">Checkout</a>
+          <button class="btn-cart trans-bg">shop more</button>
+        </div>
+      </div>
+    </div>
+    <!-- ! End cart -->
     <!-- product section -->
     <div id="product_Js" class="product_section" style="margin-top: 50px"></div>
     <div
@@ -290,7 +310,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="product_details.js"></script>
-    <!-- <script src="lightbox-plus-jquery.js"></script> -->
     <script src="all_products.js"></script>
   </body>
 </html>

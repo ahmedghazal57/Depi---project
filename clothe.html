@@ -53,7 +53,7 @@
     />
   </head>
   <body>
-    <!--Header + Nav-->
+    <!--! Header + Nav-->
     <header>
       <div class="container-nav">
         <div class="top-nav">
@@ -94,7 +94,7 @@
             <i id="user-icon" class="fa-regular fa-user"></i>
             <i id="fav-icon" class="fa-regular fa-heart"></i>
 
-            <div class="cart_header">
+            <div class="cart_header" onclick="open_cart()">
               <span class="cost">L.E 0.00</span>
               <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
               <span class="count_item">0</span>
@@ -136,9 +136,30 @@
         </div>
       </div>
     </header>
-    <!--End Of Nav-->
+    <!--! End Of Nav-->
+    <!-- ! Cart -->
+    <div class="cart">
+      <div class="top-cart">
+        <h3>My cart <span class="count_item_cart">(0Item in cart)</span></h3>
+        <span onclick="close_cart()" class="close-cart"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
 
-    <!-- Banner -->
+      <div class="items-in-cart"></div>
+      <div class="bottom-cart">
+        <div class="total">
+          <p>Cart subtotal</p>
+          <p class="price-cart-total">$0</p>
+        </div>
+        <div class="button-cart">
+          <a href="#" class="btn-cart">Checkout</a>
+          <button class="btn-cart trans-bg">shop more</button>
+        </div>
+      </div>
+    </div>
+    <!-- ! End cart -->
+    <!--! Banner -->
     <div class="products_banner">
       <div class="container">
         <h2>Get More Product</h2>
@@ -150,7 +171,7 @@
         <button class="products_shop_now">shop now</button>
       </div>
     </div>
-    <!-- Products -->
+    <!--! Products -->
     <div class="all_products">
       <div class="container">
         <!-- Button filter for responsive -->
@@ -248,7 +269,7 @@
         ></span>
       </div>
     </div>
-    <!-- Footer -->
+    <!--! Footer -->
     <footer id="footer">
       <div class="footer-top">
         <div class="container">
@@ -341,7 +362,7 @@
         </p>
       </div>
     </footer>
-    <!-- Footer Ends -->
+    <!--! Footer Ends -->
     <script src="product_details.js"></script>
     <script src="all_products.js"></script>
   </body>
