@@ -94,19 +94,25 @@ function set_details(id) {
 
     // buy now button opens buy div
     let buy_now_buttons = document.querySelectorAll(".buy_now_button");
-    buy_now_buttons.forEach((button) => {
-      button.addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        document.querySelectorAll(".buy_now").forEach((element) => {
-          element.classList.remove("d-none");
-          element.classList.add("d-flex");
-        });
+buy_now_buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    document.querySelectorAll(".buy_now").forEach((element) => {
+      element.classList.remove("d-none");
+      element.classList.add("d-flex");
+
+      // Get the position of the .buy_now element
+      let rect = element.getBoundingClientRect();
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let elementTop = rect.top + scrollTop;
+
+      // Scroll to the position of the .buy_now element
+      window.scrollTo({
+        top: elementTop,
+        behavior: "smooth",
       });
     });
-
+  });
+});
     // hiding the buy_now div when clicking away
     document.addEventListener("click", function (event) {
       const buy_now = document.getElementById("buy_now");
