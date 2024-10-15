@@ -626,6 +626,7 @@ header .end-nav #login_icon_nav_bar,
 .section1-content h3 {
   font-size: 50px;
   text-shadow: 1px 1px 1px black;
+  color: #1c1c50;
 }
 .section1-content h3 span {
   font-size: 40px;
@@ -633,7 +634,7 @@ header .end-nav #login_icon_nav_bar,
 .section1-content p {
   margin: 12px 0;
 }
-.section1-content a {
+.shop-view{
   margin: 20px 0;
   text-decoration: none;
   width: 200px;
@@ -647,12 +648,12 @@ header .end-nav #login_icon_nav_bar,
   align-items: center;
   color: #1c1c50;
 }
-.section1-content a:hover {
+.shop-view:hover {
   background-color: #1c1c50;
   color: white;
 }
-.section1-content a:active {
-  scale: 0.7;
+.shop-view:active {
+  scale: 0.8;
 }
 .section1-images {
   width: 500px;
@@ -661,8 +662,125 @@ header .end-nav #login_icon_nav_bar,
   width: 100%;
   height: 100%;
 }
+.section1-images img:hover{
+  scale:none;
+}
 /* section one ends */
-
+    /* banner */
+    .banner3{
+      margin: 50px 0;
+      height: 50vh;
+      background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(image/banner3-min.jpg);
+      background-size: cover;
+      align-content: center;
+  }
+  .banner3-content{
+      text-align: center;
+      margin: 0 2px;
+      color: white;
+  }
+  .banner3-content p{
+      text-shadow: 1px 1px 1px black;
+      color: white;
+  }
+  .banner3-content h1{
+      text-shadow: 1px 1px 1px black;
+      color: white;
+  }
+  .banner3-content a{
+      margin: auto;
+      width: 150px;
+      height: 34px;
+      color:white;
+      border: 2px solid white;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s linear;
+  }
+  .banner3-content a:hover{
+      background-color: #1c1c50;
+      border: none;
+  }
+  .banner3-content a:active{
+      scale: 0.85;
+  }
+      /* banner ends */
+  
+      /* product-cards */
+  .product-blog{
+      font-family: sans-serif;
+  }
+  .product-blog h1{
+      color: #1c1c50;
+      text-shadow: 1px 1px 1px black;
+  }
+  .product-blog .card{
+      box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+      position: relative;
+      overflow: hidden;
+  }
+  .card img{
+      transition: 0.3s;
+  }
+  .card img:hover{
+      scale: 1.08;
+  }
+  .card .card-body p{
+      color: #666666;
+  }
+  .card .card-body .star{
+      color: #1c1c50;
+  }
+  .card-body h5{
+      position: relative;
+  }
+  .card-body h5 i{
+      position: absolute;
+      right: 0px;
+      color: #1c1c50;
+      cursor: pointer;
+      transition: 0.3s transform;
+  }
+  .card-body h5 .heart:active{
+      transform: scale(1.1);
+  }
+  .card-body h5 .active-heart{
+      color: #fe6e42;
+  }
+  .react-circles{
+      position: absolute;
+      top:150px;
+      right: -50px;
+      transition: 0.3s ease-in-out;
+  }
+  .card:hover .react-circles{
+      right: 40px;
+  }
+  .react-circles .react-circles-content{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid black;
+      transition: 0.3s;
+  }
+  .react-circles-content:hover{
+      background-color: #1c1c50;
+      cursor: pointer;
+      color: white;
+  }
+  .container .shop-view{
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom:40px ;
+  }
+      /* product-cards ends */
+  
+      /* Testimonials */
+  .testimonial .card .person:hover{
+      scale: none;
+  }
 /* scrolling up */
 .up {
   position: fixed;
@@ -680,6 +798,9 @@ header .end-nav #login_icon_nav_bar,
 .up:active {
   background-color: #d13b0e;
 }
+.up:hover{
+  scale: none;
+}
 
 /* scrolling up ends */
 
@@ -689,9 +810,9 @@ header .end-nav #login_icon_nav_bar,
   color: #d0d0d0;
   background-color: #1c1c50;
   font-family: sans-serif;
-  /* position: absolute; */
-  bottom: 0;
-  width: 100%;
+}
+#footer p{
+  color: #d0d0d0;
 }
 #footer .footer-top {
   padding: 40px 0;
@@ -709,6 +830,7 @@ h4 {
   color: #d0d0d0;
   line-height: 2;
   transition: 0.3s;
+  text-decoration: underline;
 }
 .footer-links ul a:active {
   opacity: 0.7;
