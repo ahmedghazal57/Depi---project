@@ -15,9 +15,11 @@ buy_now_buttons.forEach((button) => {
       top: 0,
       behavior: "smooth",
     });
+    
     document.querySelectorAll(".buy_now").forEach((element) => {
       element.classList.remove("d-none");
       element.classList.add("d-flex");
+      
     });
   });
 });
@@ -60,4 +62,11 @@ document.querySelectorAll(".close_button").forEach((button) => {
   button.addEventListener("click", () => {
     button.closest(".cart_product").style.display = "none";
   });
+});
+
+// shop more button in cart onclick
+document.querySelectorAll(".shop_more").forEach((shop) => {
+  shop.addEventListener("click",()=>{
+    window.location.href = "clothe.html";
+  })
 });
