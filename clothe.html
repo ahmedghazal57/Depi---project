@@ -153,8 +153,8 @@
           <p class="price-cart-total">$0</p>
         </div>
         <div class="button-cart">
-          <a href="#" class="btn-cart">Checkout</a>
-          <button class="btn-cart trans-bg">shop more</button>
+          <a href="#" class="btn-cart buy_now_button" id="buy_now_button">Checkout</a>
+          <button class="btn-cart trans-bg shop_more">Shop more</button>
         </div>
       </div>
     </div>
@@ -269,6 +269,67 @@
         ></span>
       </div>
     </div>
+
+    <!-- buy now div -->
+    <div
+      class="buy_now d-none flex-column ps-5 pe-5 text-white container pt-4 pb-4"
+      id="buy_now"
+      style="min-width: 350px"
+    >
+      <p class="h3 m-0 text-capitalize mb-3">personal information</p>
+      <form class="d-flex flex-column">
+        <label class="mb-2" for="">Name and Surname</label>
+        <input
+          type="text"
+          placeholder="john doe"
+          class="mb-4 text_input pb-2 ps-2"
+        />
+        <label class="mb-2 text-capitalize" for="">phone number</label>
+        <input
+          type="tel"
+          placeholder="+20 54321"
+          class="mb-4 text_input pb-2 ps-2"
+        />
+        <label class="mb-2" for="">Addres</label>
+        <input
+          type="text"
+          placeholder="Elton st. 41 399"
+          class="mb-4 text_input pb-2 ps-2"
+        />
+        <p class="h3 m-0 text-capitalize mb-3">card information</p>
+        <input
+          type="number"
+          placeholder="Card number"
+          class="mb-4 text_input pb-2 ps-2"
+        />
+        <div class="row m-0 gap-5 p-0 container mb-2">
+          <input
+            type="number"
+            placeholder="mm"
+            class="mb-4 text_input pb-2 ps-2 col"
+          />
+          <input
+            type="number"
+            placeholder="yyyy"
+            class="mb-4 text_input pb-2 ps-2 col"
+          />
+          <input
+            type="number"
+            placeholder="cvv"
+            class="mb-4 text_input pb-2 ps-2 col"
+          />
+        </div>
+        <button
+          class="btn text-capitalize text-dark bg-white mb-2 .checkout"
+          type="button"
+          id="Checkout"
+        >
+          Checkout
+        </button>
+      </form>
+    </div>
+    <!-- buy now div -->
+
     <!--! Footer -->
     <footer id="footer">
       <div class="footer-top">
@@ -365,5 +426,6 @@
     <!--! Footer Ends -->
     <script src="product_details.js"></script>
     <script src="all_products.js"></script>
+    <script src="cart_page.js"></script>
   </body>
 </html>

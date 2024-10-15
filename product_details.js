@@ -63,7 +63,7 @@ function set_details(id) {
             <button class="btn col-lg-6 text-capitalize add_cart buy_now_button" type="button" id="buy_now_button">
               buy now
             </button>
-            <button class="btn col-lg-6 text-capitalize" type="button" id="cart_page_button">
+            <button class="btn col-lg-6 text-capitalize add_cart" type="button" id="cart_page_button">
               cart page
             </button>
           </div>
