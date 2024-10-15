@@ -41,6 +41,7 @@ function slideShow() {
 }
 slideShow();
 // section1 ends
+
 // love-react
 let heartIcons = document.querySelectorAll(".heart");
 heartIcons.forEach(function(heartIcon) {

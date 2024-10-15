@@ -38,11 +38,11 @@ a {
 
 /*Build Nav + Header*/
 header {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 1000; */
   /* background-color: #3498db; */
 }
 header .container-nav {
@@ -291,7 +291,7 @@ header .container-nav .end-nav {
   justify-content: space-between;
   align-items: center;
   background-color: #1c1c50;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   /* width: 50%; */
 }
 header .container-nav .end-nav ul {
@@ -618,7 +618,7 @@ header .end-nav #login_icon_nav_bar,
   /* margin-top: 250px; */
 }
 .section1-home {
-  margin-top: 210px;
+  /* margin-top: 210px; */
   padding: 60px 0;
   display: flex;
   justify-content: center;
@@ -673,48 +673,7 @@ header .end-nav #login_icon_nav_bar,
   scale:none;
 }
 /* section one ends */
-    /* banner */
-    .banner3{
-      margin: 50px 0;
-      height: 50vh;
-      background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(image/banner3-min.jpg);
-      background-size: cover;
-      align-content: center;
-  }
-  .banner3-content{
-      text-align: center;
-      margin: 0 2px;
-      color: white;
-  }
-  .banner3-content p{
-      text-shadow: 1px 1px 1px black;
-      color: white;
-  }
-  .banner3-content h1{
-      text-shadow: 1px 1px 1px black;
-      color: white;
-  }
-  .banner3-content a{
-      margin: auto;
-      width: 150px;
-      height: 34px;
-      color:white;
-      border: 2px solid white;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: 0.3s linear;
-  }
-  .banner3-content a:hover{
-      background-color: #1c1c50;
-      border: none;
-  }
-  .banner3-content a:active{
-      scale: 0.85;
-  }
-      /* banner ends */
-  
+ 
       /* product-cards */
   .product-blog{
       font-family: sans-serif;
@@ -722,6 +681,7 @@ header .end-nav #login_icon_nav_bar,
   .product-blog h1{
       color: #1c1c50;
       text-shadow: 1px 1px 1px black;
+      margin-top: 40px;
   }
   .product-blog .card{
       box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
@@ -739,6 +699,9 @@ header .end-nav #login_icon_nav_bar,
   }
   .card .card-body .star{
       color: #1c1c50;
+  }
+  del{
+    text-decoration: line-through;
   }
   .card-body h5{
       position: relative;
@@ -782,8 +745,49 @@ header .end-nav #login_icon_nav_bar,
       margin-top: 30px;
       margin-bottom:40px ;
   }
-      /* product-cards ends */
-  
+    /* product-cards ends */
+    /* banner */
+    .banner3{
+      margin: 50px 0;
+      height: 50vh;
+      background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(image/banner3-min.jpg);
+      background-size: cover;
+      align-content: center;
+  }
+  .banner3-content{
+      text-align: center;
+      margin: 0 2px;
+      color: white;
+  }
+  .banner3-content p{
+      text-shadow: 1px 1px 1px black;
+      color: white;
+  }
+  .banner3-content h1{
+      text-shadow: 1px 1px 1px black;
+      color: white;
+  }
+  .banner3-content a{
+      margin: auto;
+      width: 150px;
+      height: 34px;
+      color:white;
+      border: 2px solid white;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s linear;
+  }
+  .banner3-content a:hover{
+      background-color: #1c1c50;
+      border: none;
+  }
+  .banner3-content a:active{
+      scale: 0.85;
+  }
+      /* banner ends */
+
       /* Testimonials */
   .testimonial .card .person:hover{
       scale: none;
@@ -808,8 +812,9 @@ header .end-nav #login_icon_nav_bar,
 .up:hover{
   scale: none;
 }
-
 /* scrolling up ends */
+
+/* Home page ends */
 
 /* Footer */
 #footer {
@@ -880,7 +885,7 @@ h4 {
   object-fit: cover;
   padding: 20px 0;
   margin: 20px 0;
-  margin-top: 210px;
+  /* margin-top: 210px; */
   background-position: right top;
 }
 .products_banner .container {
@@ -1222,8 +1227,8 @@ img:hover {
 /* Sign in &Sign up */
 .login {
   width: 90%;
-  margin: 10px auto;
-  margin-top: 210px;
+  margin: 40px auto;
+  /* margin-top: 210px; */
   padding: 30px;
   background: #1c1c5017;
   border-radius: 10px;
@@ -1374,8 +1379,8 @@ img:hover {
 .about_us {
   height: 115vh;
   width: 90%;
-  margin: 10px auto;
-  margin-top: 210px;
+  margin: 40px auto;
+  /* margin-top: 210px; */
   padding: 30px;
   background: #ffffff;
   border-radius: 10px;
@@ -1465,8 +1470,8 @@ img:hover {
 .contact_us {
   height: 600px;
   width: 90%;
-  margin: 20px auto;
-  margin-top: 210px;
+  margin: 40px auto;
+  /* margin-top: 210px; */
   padding: 30px;
   background: #ffffff;
   border-radius: 10px;
