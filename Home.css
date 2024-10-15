@@ -1696,6 +1696,9 @@ textarea {
 .cart_product img {
   background-color: rgba(255, 255, 255, 0.725);
 }
+.cart_product img:hover{
+  scale: none;
+}
 .more_products:hover,
 .checkout:hover {
   background-color: var(--main-color);

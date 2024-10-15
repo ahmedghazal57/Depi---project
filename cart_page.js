@@ -11,18 +11,24 @@ function close_menu() {
 let buy_now_buttons = document.querySelectorAll(".buy_now_button");
 buy_now_buttons.forEach((button) => {
   button.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-    
     document.querySelectorAll(".buy_now").forEach((element) => {
       element.classList.remove("d-none");
       element.classList.add("d-flex");
-      
+
+      // Get the position of the .buy_now element
+      let rect = element.getBoundingClientRect();
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let elementTop = rect.top + scrollTop;
+
+      // Scroll to the position of the .buy_now element
+      window.scrollTo({
+        top: elementTop,
+        behavior: "smooth",
+      });
     });
   });
 });
+
 // if you click anywhere else the buy now div closes
 document.addEventListener("click", function (event) {
   const buy_now = document.getElementById("buy_now");
@@ -45,7 +51,7 @@ const cart_div = JSON.parse(sessionStorage.getItem("cart_div"));
 let cart_item_container = document.querySelector(".cart_item_container");
 if (cart_div) {
   cart_item_container.innerHTML += `
-            <img src="${cart_div.img}" alt="" class="col-lg-3">
+            <img src="${cart_div.img}" alt="" class="col-lg-3 ">
             <div class="flex flex-column col">
             <p class="text-capitalize">${cart_div.name}</p>
             <span><p class="text-capitalize">color grey , size M</p></span>
