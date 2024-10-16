@@ -354,7 +354,6 @@ header .container-nav .end-nav #sign_up_icon {
   color: white;
   margin: 2px;
   padding: 5px;
-  /* color: #d0d0d0; */
 }
 header .container-nav .end-nav #sign_up_icon:hover {
   transform: scale(1.2);
@@ -370,7 +369,8 @@ header .end-nav #login_icon_nav_bar,
 /*?---------------------------Responsive End Nav---------------------------*/
 @media (max-width: 889px) /*for tablets*/ {
   header .end-nav {
-    padding: 10px 0;
+    padding: 0px 0;
+    background: white !important;
   }
   header .end-nav ul {
     display: flex;
@@ -467,9 +467,6 @@ header .end-nav #login_icon_nav_bar,
   }
   header .end-nav #login_icon,
   header .end-nav #sign_up_icon {
-    display: none;
-  }
-  header .container-nav .end-nav {
     display: none;
   }
   header .container-nav .middle-nav .icons {
@@ -617,6 +614,7 @@ header .end-nav #login_icon_nav_bar,
   pointer-events: none;
   position: relative;
   overflow: hidden;
+  color: white;
 }
 .cart_active.active::after {
   content: "";
@@ -1380,6 +1378,7 @@ img:hover {
     width: 100%;
     height: 400px;
     margin-bottom: 10px;
+    margin-top: 30px;
   }
   .login .container .login_content {
     width: 100%;
@@ -1474,13 +1473,14 @@ img:hover {
 /* About us responsive */
 @media (max-width: 800px) {
   .about_us {
-    height: 1000px;
+    height: 860px;
   }
   .about_us .container {
     flex-direction: column-reverse;
   }
   .about_us .container .about_image {
     width: 100%;
+    height: 300px;
   }
   .about_us .container .about_title {
     display: flex;
@@ -1627,6 +1627,7 @@ textarea {
 @media (max-width: 1000px) {
   .contact_us {
     height: 900px;
+    margin-top: 210px;
   }
   .contact_us .container .contact_info {
     width: 100%;
