@@ -94,25 +94,19 @@ function set_details(id) {
 
     // buy now button opens buy div
     let buy_now_buttons = document.querySelectorAll(".buy_now_button");
-buy_now_buttons.forEach((button) => {
-  button.addEventListener("click", function () {
-    document.querySelectorAll(".buy_now").forEach((element) => {
-      element.classList.remove("d-none");
-      element.classList.add("d-flex");
-
-      // Get the position of the .buy_now element
-      let rect = element.getBoundingClientRect();
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      let elementTop = rect.top + scrollTop;
-
-      // Scroll to the position of the .buy_now element
-      window.scrollTo({
-        top: elementTop,
-        behavior: "smooth",
+    buy_now_buttons.forEach((button) => {
+      button.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        document.querySelectorAll(".buy_now").forEach((element) => {
+          element.classList.remove("d-none");
+          element.classList.add("d-flex");
+        });
       });
     });
-  });
-});
+
     // hiding the buy_now div when clicking away
     document.addEventListener("click", function (event) {
       const buy_now = document.getElementById("buy_now");
@@ -153,15 +147,14 @@ function close_cart() {
 
 //! adding logic to cart
 var items_in_cart = document.querySelector(".items-in-cart");
-// let product_cart = [];
 let product_cart = JSON.parse(localStorage.getItem("product_cart")) || [];
 let price_cart_head = document.querySelector(".cost");
 let count_item = document.querySelector(".count_item");
 let count_item_cart = document.querySelector(".count_item_cart");
 let price_cart_total = document.querySelector(".price-cart-total");
 
-
 function addToCard(id, btn) {
+  console.log(id);
   product_cart.push(productsArray[id]);
   btn.classList.add("active");
   localStorage.setItem("product_cart", JSON.stringify(product_cart));
@@ -200,7 +193,8 @@ function remove_from_cart(index) {
   localStorage.setItem("product_cart", JSON.stringify(product_cart));
   getCartItems();
 
-  let addToCartButtons = document.querySelectorAll(".fa-cart-plus");
+  let addToCartButtons = document.querySelectorAll(".fa-cart-plus2 ");
+  // let addToCartButtons2 = document.querySelectorAll(".cart_active");
   for (let i = 0; i < addToCartButtons.length; i++) {
     addToCartButtons[i].classList.remove("active");
     product_cart.forEach((product) => {
