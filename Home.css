@@ -636,7 +636,7 @@ header .end-nav #login_icon_nav_bar,
   background-color: #a9a9a926;
   font-family: sans-serif;
   color: #1c1c50;
-  margin-top: 185px;
+  margin-top: 183px;
 }
 .section1-home {
   padding: 60px 0;
@@ -680,7 +680,7 @@ header .end-nav #login_icon_nav_bar,
   color: white;
 }
 .shop-view:active {
-  scale: 0.8;
+  scale: 0.85;
 }
 .section1-images {
   width: 500px;
@@ -726,10 +726,11 @@ header .end-nav #login_icon_nav_bar,
 del {
   text-decoration: line-through;
 }
-.card-body h5 {
+.card-body h5, .card-body h6{
   position: relative;
 }
-.card-body h5 i {
+.card-body h5 i, .card-body h6 i{
+  font-size: 20px;
   position: absolute;
   right: 0px;
   color: #1c1c50;
@@ -1262,7 +1263,7 @@ img:hover {
 .login {
   width: 90%;
   margin: 40px auto;
-  margin-top: 195px;
+  margin-top: 225px;
   padding: 30px;
   background: #1c1c5017;
   border-radius: 10px;
@@ -1417,7 +1418,7 @@ img:hover {
   height: 115vh;
   width: 90%;
   margin: 40px auto;
-  margin-top: 195px;
+  margin-top: 225px;
   padding: 30px;
   background: #ffffff;
   border-radius: 10px;
@@ -1512,7 +1513,7 @@ img:hover {
   height: 600px;
   width: 90%;
   margin: 40px auto;
-  margin-top: 195px;
+  margin-top: 225px;
   padding: 30px;
   background: #ffffff;
   border-radius: 10px;
@@ -1732,7 +1733,7 @@ textarea {
   font-size: larger;
   border-radius: 7px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
-  margin-top: 195px;
+  margin-top: 0px;
 }
 .cart_product p {
   color: rgba(255, 255, 255, 0.854);
