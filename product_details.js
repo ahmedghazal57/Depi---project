@@ -57,7 +57,7 @@ function set_details(id) {
               <button class="btn text-capitalize size" type="button">md</button>
               <button class="btn text-capitalize size" type="button">lg</button>
             </div>
-            <button class="btn col-lg-6 text-capitalize add_cart" type="button" id="add_cart">
+            <button class="btn col-lg-6 text-capitalize add_cart" type="button" id="add_cart" onclick="addToCard(${products_details.id}, this)">
               add to cart
             </button>
             <button class="btn col-lg-6 text-capitalize add_cart buy_now_button" type="button" id="buy_now_button">
@@ -81,15 +81,14 @@ function set_details(id) {
         btnEl.classList.add("special");
       });
     });
+
+    //add to cart button in the product page
     let addCartButton = document.getElementById("add_cart");
     addCartButton.addEventListener("click", () => {
-      if (addCartButton.classList.contains("special2")) {
-        addCartButton.classList.remove("special2");
-        addCartButton.innerHTML = "Add to cart";
-      } else {
+      addCartButton.classList.remove("active");
         addCartButton.classList.add("special2");
         addCartButton.innerHTML = "Added to cart";
-      }
+      
     });
 
     // buy now button opens buy div
