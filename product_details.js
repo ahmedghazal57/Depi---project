@@ -196,6 +196,7 @@ function getCartItems() {
 }
 
 function remove_from_cart(index) {
+  id_pointer--;
   id_Array.splice(index, 1);
   product_cart.splice(index, 1);
   localStorage.setItem("product_cart", JSON.stringify(product_cart));
