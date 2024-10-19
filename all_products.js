@@ -95,7 +95,7 @@ const productsArray = [
   {
     id: 12,
     img: "image/p13.png",
-    name: "Hand Bag",
+    name: "T-Shirt",
     price: 20.5,
     old_price: 25,
   },
