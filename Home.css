@@ -825,7 +825,7 @@ del {
   position: fixed;
   bottom: 20px;
   right: -50px;
-  background-color: #fe6e42;
+  background-color: #ffffff;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
@@ -835,7 +835,7 @@ del {
   right: 15px;
 }
 .up:active {
-  background-color: #d13b0e;
+  background-color: #1c1c50;
 }
 .up:hover {
   scale: none;
