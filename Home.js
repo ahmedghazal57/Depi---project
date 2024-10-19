@@ -44,8 +44,8 @@ slideShow();
 
 // love-react
 let heartIcons = document.querySelectorAll(".heart");
-heartIcons.forEach(function(heartIcon) {
-heartIcon.addEventListener('click', function() {
-this.classList.toggle('active-heart'); 
-});
+heartIcons.forEach(function (heartIcon) {
+  heartIcon.addEventListener("click", function () {
+    this.classList.toggle("active-heart");
+  });
 });

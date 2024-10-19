@@ -57,7 +57,7 @@ function set_details(id) {
               <button class="btn text-capitalize size" type="button">md</button>
               <button class="btn text-capitalize size" type="button">lg</button>
             </div>
-            <button class="btn col-lg-6 text-capitalize add_cart" type="button" id="add_cart">
+            <button class="btn col-lg-6 text-capitalize add_cart" type="button" id="add_cart" onclick="addToCard(${products_details.id}, this)">
               add to cart
             </button>
             <button class="btn col-lg-6 text-capitalize add_cart buy_now_button" type="button" id="buy_now_button">
@@ -81,15 +81,14 @@ function set_details(id) {
         btnEl.classList.add("special");
       });
     });
+
+    //add to cart button in the product page
     let addCartButton = document.getElementById("add_cart");
     addCartButton.addEventListener("click", () => {
-      if (addCartButton.classList.contains("special2")) {
-        addCartButton.classList.remove("special2");
-        addCartButton.innerHTML = "Add to cart";
-      } else {
+      addCartButton.classList.remove("active");
         addCartButton.classList.add("special2");
         addCartButton.innerHTML = "Added to cart";
-      }
+      
     });
 
     // buy now button opens buy div
@@ -152,9 +151,17 @@ let price_cart_head = document.querySelector(".cost");
 let count_item = document.querySelector(".count_item");
 let count_item_cart = document.querySelector(".count_item_cart");
 let price_cart_total = document.querySelector(".price-cart-total");
-
+let id_Array = [];
+let id_pointer = 0;
 function addToCard(id, btn) {
-  console.log(id);
+  for (let i = 0; i < id_Array.length; i++) {
+    if (id_Array[i] == id) {
+      alert("Already added to cart");
+      return;
+    }
+  }
+  id_Array[id_pointer] = id;
+  id_pointer++;
   product_cart.push(productsArray[id]);
   btn.classList.add("active");
   localStorage.setItem("product_cart", JSON.stringify(product_cart));
@@ -189,12 +196,12 @@ function getCartItems() {
 }
 
 function remove_from_cart(index) {
+  id_Array.splice(index, 1);
   product_cart.splice(index, 1);
   localStorage.setItem("product_cart", JSON.stringify(product_cart));
   getCartItems();
 
   let addToCartButtons = document.querySelectorAll(".fa-cart-plus2 ");
-  // let addToCartButtons2 = document.querySelectorAll(".cart_active");
   for (let i = 0; i < addToCartButtons.length; i++) {
     addToCartButtons[i].classList.remove("active");
     product_cart.forEach((product) => {

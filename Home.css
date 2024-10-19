@@ -537,7 +537,7 @@ header .end-nav #login_icon_nav_bar,
   padding: 20px 0;
   border-block: 1px solid var(--border-color);
   margin-block: 20px;
-  height: 100%;
+  height: 2000px;
 }
 .cart .item-cart {
   display: flex;
@@ -726,10 +726,12 @@ header .end-nav #login_icon_nav_bar,
 del {
   text-decoration: line-through;
 }
-.card-body h5, .card-body h6{
+.card-body h5,
+.card-body h6 {
   position: relative;
 }
-.card-body h5 i, .card-body h6 i{
+.card-body h5 i,
+.card-body h6 i {
   font-size: 20px;
   position: absolute;
   right: 0px;
@@ -908,13 +910,13 @@ h4 {
 /* ?---------------------------banner--------------------------- */
 .products_banner {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   background-image: url(image/banner2.jpg);
   background-size: cover;
   object-fit: cover;
   padding: 20px 0;
   margin: 20px 0;
-  margin-top: 185px;
+  margin-top: 190px;
   background-position: right top;
 }
 .products_banner .container {
@@ -1495,7 +1497,7 @@ img:hover {
 @media (max-width: 530px) {
   .about_us .container .about_title h1 {
     text-decoration: none;
-    font-size: 40px;
+    font-size: 32px;
   }
   .about_us .content {
     font-size: 14px;
@@ -1627,7 +1629,7 @@ textarea {
 /* ?---------------------------Contact Us responsive--------------------------- */
 @media (max-width: 1000px) {
   .contact_us {
-    height: 900px;
+    min-height: fit-content;
     margin-top: 210px;
   }
   .contact_us .container .contact_info {
@@ -1641,6 +1643,10 @@ textarea {
   }
   .contact_us .container .contact_info .contact_details h4 {
     width: 100%;
+  }
+  .contact_div {
+    position: relative;
+    left: -18px;
   }
 }
 /*!---------------------------End Contact_Us---------------------------  */
@@ -1699,8 +1705,8 @@ textarea {
 
 .buy_now {
   background-color: var(--main-color);
-  z-index: 6;
-  position: absolute;
+  z-index: 100000000;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1708,6 +1714,7 @@ textarea {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.647);
 }
+
 .text_input {
   border: 0;
   border-bottom: 2px solid grey;

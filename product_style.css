@@ -17,14 +17,6 @@ a {
   text-decoration: none;
 }
 /*Build Nav + Header*/
-header {
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; */
-  /* background-color: #3498db; */
-}
 header .container-nav {
   width: 100%;
 }
