@@ -756,6 +756,13 @@ header .end-nav #login_icon_nav_bar,
 .card img:hover {
   scale: 1.08;
 }
+.card .card-body h3{
+  display: inline-block;
+  cursor: pointer;
+}
+.card .card-body h3:hover{
+  text-decoration: underline;
+}
 .card .card-body p {
   color: #666666;
 }
