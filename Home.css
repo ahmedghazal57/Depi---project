@@ -864,7 +864,7 @@ del {
   position: fixed;
   bottom: 20px;
   right: -50px;
-  background-color: #ffffff;
+  background-color: lightblue;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
